@@ -1,0 +1,3 @@
+com\cgi\cms\cpf\utl\exc\CMSRuntimeException.class
+com\cgi\cms\cpf\utl\exc\GeneralCMFException.class
+com\cgi\cms\cpf\utl\exc\Rejection.class
