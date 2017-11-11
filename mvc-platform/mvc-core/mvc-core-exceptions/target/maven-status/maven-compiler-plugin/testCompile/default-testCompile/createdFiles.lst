@@ -1,0 +1,3 @@
+com\mks\mvc\core\exc\CMSRuntimeExceptionTest.class
+com\mks\mvc\core\exc\GeneralCMFExceptionTest.class
+com\mks\mvc\core\exc\RejectionTest.class

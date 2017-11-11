@@ -1,0 +1,6 @@
+projectKey=com.mks.mvc:mvc-platform
+serverUrl=http://localhost:9000
+serverVersion=6.6.0.32724
+dashboardUrl=http://localhost:9000/dashboard/index/com.mks.mvc:mvc-platform
+ceTaskId=AV-riXsAlCYRIH9h5IdL
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AV-riXsAlCYRIH9h5IdL
