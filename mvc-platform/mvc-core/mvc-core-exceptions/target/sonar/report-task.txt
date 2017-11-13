@@ -1,0 +1,6 @@
+projectKey=com.mks.mvc.core:mvc-core-exceptions
+serverUrl=http://localhost:9000
+serverVersion=6.6.0.32724
+dashboardUrl=http://localhost:9000/dashboard/index/com.mks.mvc.core:mvc-core-exceptions
+ceTaskId=AV-uB4C9HFwba3kBGny0
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AV-uB4C9HFwba3kBGny0
