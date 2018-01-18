@@ -1,0 +1,87 @@
+use userbase;
+DROP TABLE IF EXISTS user_roles;
+DROP TABLE IF EXISTS users;
+CREATE  TABLE users (
+  userid int(11) NOT NULL AUTO_INCREMENT,
+  username VARCHAR(45) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  password VARCHAR(60) NOT NULL ,
+  enabled TINYINT NOT NULL DEFAULT 1 ,
+  PRIMARY KEY (userid));
+  
+CREATE TABLE user_roles (
+  user_role_id int(11) NOT NULL AUTO_INCREMENT,
+  userid int(11) NOT NULL,
+  role varchar(45) NOT NULL,
+  PRIMARY KEY (user_role_id),
+  UNIQUE KEY uni_userid_role (role,userid),
+  KEY fk_user_idx (userid),
+  CONSTRAINT fk_userid FOREIGN KEY (userid) REFERENCES users (userid));
+
+INSERT INTO users(username,email,password,enabled)
+VALUES ('priya','abc@abc.com','$2a$04$CO93CT2ObgMiSnMAWwoBkeFObJlMYi/wzzOnPlsTP44r7qVq0Jln2', true);
+INSERT INTO users(username,email,password,enabled)
+VALUES ('naveen','def@def.com','$2a$04$j3JpPUp6CTAe.kMWmdRNC.Wie58xDNPfcYz0DBJxWkucJ6ekJuiJm', true);
+
+INSERT INTO user_roles (userid, role)
+VALUES (001, 'ROLE_USER');
+INSERT INTO user_roles (userid, role)
+VALUES (002, 'ROLE_ADMIN');
+INSERT INTO user_roles (userid, role)
+VALUES (002, 'ROLE_USER');
+
+<--==== student table===----->
+use mks_edu;
+CREATE TABLE mks_stundent (
+ stundent_id int(11) NOT NULL AUTO_iNCREMENT,
+ student_first_name varchar(60) NOT NULL,
+ student_last_name varchar(60) NOT NULL,
+ student_father_name varchar(40),
+ student_mother_name varchar(40),
+ student_date_of_birth varchar(40),
+ student_age varchar(20),
+ student_address varchar(70),
+ student_area varchar(60),
+ student_city varchar(60),
+ student_postal_code varchar(30),
+ student_joining_Date varchar(20),
+ student_about_me varchar(100),
+ student_profile_photo varchar(100),
+  PRIMARY KEY (stundent_id));
+
+  <-----=======================------->
+  CREATE TABLE `mks_edu`.`mks_old_student` (
+  `old_student_id` INT NOT NULL AUTO_INCREMENT,
+  `old_student_school` VARCHAR(60) NULL,
+  `old_student_class` VARCHAR(45) NULL,
+  `old_student_percentage` VARCHAR(45) NULL,
+  `old_student_year` VARCHAR(45) NULL,
+  `student_id` INT NOT NULL,
+  PRIMARY KEY (`old_student_id`),
+  INDEX `fk_old_student_id_idx` (`student_id` ASC),
+  CONSTRAINT `fk_old_student_id`
+    FOREIGN KEY (`student_id`)
+    REFERENCES `mks_edu`.`mks_stundent` (`stundent_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+    
+    
+    
+    <-------==============create RAW_ITEMS=======---->
+    
+    use mks_edu;
+CREATE TABLE mks_RAW_ITEMS (
+raw_items_id int(11) NOT NULL AUTO_iNCREMENT,
+raw_item_name varchar(60) NOT NULL,
+ raw_item_unit varchar(20) NOT NULL,
+ raw_item_price int(11),
+
+ <-----===============worksers table====---->
+ 
+ CREATE TABLE `mks_edu`.`mks_workers` (
+  `workers_id` INT NOT NULL AUTO_INCREMENT,
+  `workers_name` VARCHAR(45) NULL,
+  `workers_salary` VARCHAR(45) NULL,
+  `workers_attendance` VARCHAR(45) NULL,
+  `daily date` VARCHAR(45) NULL,
+  PRIMARY KEY (`workers_id`));
