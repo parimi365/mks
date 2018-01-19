@@ -14,6 +14,7 @@ public class OrganicDosaHubService
 
     @Autowired
     private  OrgnaicDosaHubRepository orgnaicDosaHubRepository;
+    
 
     public OrganicDosaHubService()
     {
