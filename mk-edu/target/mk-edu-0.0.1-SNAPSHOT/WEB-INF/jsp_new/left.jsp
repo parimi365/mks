@@ -12,7 +12,18 @@
                 <li class="list-group-item"><i class="glyphicon glyphicon-align-justify"></i> <b>SIDE PANEL</b></li>
                 <li class="list-group-item"><input type="text" class="form-control search-query" placeholder="Search Something"></li>
                 <li class="list-group-item"><a href="index.html"><i class="glyphicon glyphicon-home"></i>Dashboard </a></li>
-                <li class="list-group-item"><a href="rawItems.jsp"><i class="glyphicon glyphicon-certificate"></i>raw items </a></li>
+                <!-- <li class="list-group-item"><a href="/rawItems"><i class="glyphicon glyphicon-certificate"></i>raw items </a></li> -->
+                
+           
+                
+                 <li>
+                  <a href="#demo4" class="list-group-item " data-toggle="collapse"> <i class="glyphicon glyphicon-cutlery"></i>Organic dosa hub<span class="glyphicon glyphicon-chevron-right"></span></a>
+                    <li class="collapse" id="demo4">
+                      <a href="/rawItems" class="list-group-item"><i class="glyphicon glyphicon-hand-right"></i>raw items</a>
+                      <a href="/workers" class="list-group-item"><i class="glyphicon glyphicon-hand-right"></i>workers</a>
+                      <a href="/plates" class="list-group-item"><i class="glyphicon glyphicon-hand-right"></i>dosa&idly</a>
+                    </li>
+                </li>
                 <li class="list-group-item"><a href="list.html"><i class="glyphicon glyphicon-th-list"></i>Tables and List </a></li>
                 <li class="list-group-item"><a href="forms.html"><i class="glyphicon glyphicon-list-alt"></i>Forms</a></li>
                 <li class="list-group-item"><a href="alerts.html"><i class="glyphicon glyphicon-bell"></i>Alerts</li>

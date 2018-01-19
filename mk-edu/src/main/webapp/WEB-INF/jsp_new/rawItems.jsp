@@ -19,7 +19,7 @@
               </div> -->
 				<div class="panel-body">
 
-					<div class="panel panel-primary">
+					<%-- <div class="panel panel-primary">
 
 						<div class="panel-heading">
 							<h3 class="panel-title">console</h3>
@@ -59,8 +59,90 @@
 						<!--   <button class="btn btn-info" type="submit">save</button>
 					 -->
 					</form:form>
-				</div>
+				</div> --%>
 
+
+
+					<div class="panel-body">
+						<div class="row">
+							<form:form action="/rawItemSave" modelAttribute="rawItems">
+
+								<div class="input-group control-group  after-add-more">
+									<!-- 	  <input type="text" name="addmore[]" class="form-control" placeholder="Enter Name Here">
+				  <input type="text" name="addmore[]" class="form-control" placeholder="Enter Name Here">
+				  <input type="text" name="addmore[]" class="form-control" placeholder="Enter Name Here"> -->
+									<div class="col-md-3">
+										RAW ITEMS <input type="text" name="rawItemsName"
+											class="form-control" placeholder=".col-md-3">
+									</div>
+
+									<div class="col-md-3">
+										UNTIS(KGS) <input type="text" name="rawItemUnit"
+											class="form-control" placeholder=".col-md-3">
+									</div>
+									<div class="col-md-3">
+										PRICE <input type="text" name="rawItemPrice"
+											class="form-control" placeholder=".col-md-3">
+									</div>
+									<div class="input-group-btn">
+										<button class="btn btn-success add-more" type="button">
+											<i class="glyphicon glyphicon-plus"></i> Add
+										</button>
+									</div>
+								</div>
+								<input type="submit" value="save" class="btn btn-info" />
+
+								<!--   <button class="btn btn-info" type="submit">save</button>
+					 -->
+							</form:form>
+
+
+							<!-- Copy Fields-These are the fields which we get through jquery and then add after the above input,-->
+							<div class="copy-fields hide">
+								<div class="control-group  input-group" style="margin-top: 10px">
+
+									<!-- <input type="text" name="addmore[]" class="form-control" placeholder="Enter Name Here"> -->
+									<div class="col-md-3">
+										RAW ITEMS <input type="text" name="rawItemsName"
+											class="form-control" placeholder=".col-md-3">
+									</div>
+
+									<div class="col-md-3">
+										UNTIS(KGS) <input type="text" name="rawItemUnit"
+											class="form-control" placeholder=".col-md-3">
+									</div>
+									<div class="col-md-3">
+										PRICE <input type="text" name="rawItemPrice"
+											class="form-control" placeholder=".col-md-3">
+
+									</div>
+									<div class="input-group-btn">
+										<button class="btn btn-danger remove" type="button">
+											<i class="glyphicon glyphicon-remove"></i> Remove
+										</button>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<script type="text/javascript">
+				
+					$(document).ready(function() {
+				
+						//here first get the contents of the div with name class copy-fields and add it to after "after-add-more" div class.
+						$(".add-more").click(function() {
+							var html = $(".copy-fields").html();
+							$(".after-add-more").after(html);
+						});
+						//here it will remove the current value of the remove button which has been pressed
+						$("body").on("click", ".remove", function() {
+							$(this).parents(".control-group").remove();
+						});
+				
+					});
+				</script>
 			</div>
 
 			<!-- content -->
@@ -69,4 +151,48 @@
 	</div>
 
 </body>
+<
+<script type="text/javascript">
 
+$(document).ready(function () {
+    var counter = 0;
+
+    $("#addrow").on("click", function () {
+        var newRow = $("<tr>");
+        var cols = "";
+
+        cols += '<td><input type="text" class="form-control" name="name' + counter + '"/></td>';
+        cols += '<td><input type="text" class="form-control" name="mail' + counter + '"/></td>';
+        cols += '<td><input type="text" class="form-control" name="phone' + counter + '"/></td>';
+
+        cols += '<td><input type="button" class="ibtnDel btn btn-md btn-danger "  value="Delete"></td>';
+        newRow.append(cols);
+        $("table.order-list").append(newRow);
+        counter++;
+    });
+
+
+
+    $("table.order-list").on("click", ".ibtnDel", function (event) {
+        $(this).closest("tr").remove();       
+        counter -= 1
+    });
+
+
+});
+
+
+
+function calculateRow(row) {
+    var price = +row.find('input[name^="price"]').val();
+
+}
+
+function calculateGrandTotal() {
+    var grandTotal = 0;
+    $("table.order-list").find('input[name^="price"]').each(function () {
+        grandTotal += +$(this).val();
+    });
+    $("#grandtotal").text(grandTotal.toFixed(2));
+}
+</script>

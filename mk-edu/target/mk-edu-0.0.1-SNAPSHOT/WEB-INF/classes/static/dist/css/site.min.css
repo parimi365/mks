@@ -3790,10 +3790,10 @@ select[multiple].input-group-sm>.form-control, select[multiple].input-group-sm>.
 	{
 	margin-right: -1px
 }
-
+/* chenged to for add and remove -2 to -202 */
 .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group
 	{
-	margin-left: -1px
+	margin-left: inherit;
 }
 
 .nav {
@@ -12850,3 +12850,4 @@ body {
 	background-color: #373E4A;
 	border-color: #373E4A
 }
+
