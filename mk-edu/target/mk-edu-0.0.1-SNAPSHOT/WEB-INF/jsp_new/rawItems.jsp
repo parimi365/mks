@@ -68,20 +68,30 @@
 							<form:form action="/rawItemSave" modelAttribute="rawItems">
 
 								<div class="input-group control-group  after-add-more">
-									<!-- 	  <input type="text" name="addmore[]" class="form-control" placeholder="Enter Name Here">
-				  <input type="text" name="addmore[]" class="form-control" placeholder="Enter Name Here">
-				  <input type="text" name="addmore[]" class="form-control" placeholder="Enter Name Here"> -->
+
+
+
 									<div class="col-md-3">
-										RAW ITEMS <input type="text" name="rawItemsName[]"
-											class="form-control" placeholder=".col-md-3">
+										RAW ITEMS <!-- <input type="text" name="rawItemsName"
+											class="form-control" placeholder=".col-md-3"> -->
+											 <select
+											 class="selecter_3"
+											data-selecter-options='{"cover":"true"}' name = "rawItemsName">
+											<option value="Rice">Rice</option>
+											<option value="Mennapappu">Mennapappu</option>
+											<option value="ravva">ravva</option>
+											<option value="4">palli</option>
+											<option value="5">ground nuts</option>
+										</select>
+
 									</div>
 
 									<div class="col-md-3">
-										UNTIS(KGS) <input type="text" name="rawItemUnit[]"
+										UNTIS(KGS) <input type="text" name="rawItemUnit"
 											class="form-control" placeholder=".col-md-3">
 									</div>
 									<div class="col-md-3">
-										PRICE <input type="text" name="rawItemPrice[]"
+										PRICE <input type="text" name="rawItemPrice"
 											class="form-control" placeholder=".col-md-3">
 									</div>
 									<div class="input-group-btn">
@@ -103,16 +113,23 @@
 
 									<!-- <input type="text" name="addmore[]" class="form-control" placeholder="Enter Name Here"> -->
 									<div class="col-md-3">
-										RAW ITEMS <input type="text" name="rawItemsName[]"
-											class="form-control" placeholder=".col-md-3">
+										RAW ITEMS <select
+										 class="selecter_3"
+											data-selecter-options='{"cover":"true"}' name = "rawItemsName">
+											<option value="Rice">Rice</option>
+											<option value="Mennapappu">Mennapappu</option>
+											<option value="ravva">ravva</option>
+											<option value="4">palli</option>
+											<option value="5">ground nuts</option>
+										</select>
 									</div>
 
 									<div class="col-md-3">
-										UNTIS(KGS) <input type="text" name="rawItemUnit[]"
+										UNTIS(KGS) <input type="text" name="rawItemUnit"
 											class="form-control" placeholder=".col-md-3">
 									</div>
 									<div class="col-md-3">
-										PRICE <input type="text" name="rawItemPrice[]"
+										PRICE <input type="text" name="rawItemPrice"
 											class="form-control" placeholder=".col-md-3">
 
 									</div>
