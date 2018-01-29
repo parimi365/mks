@@ -34,7 +34,7 @@ public class OrganicDosaHubController
 
         model.addAttribute("rawItems", rawItems);
         logger.info("raw Item Name:-" + rawItems.getRawItemsName());
-        organicDosaHubService.save(rawItems);
+        organicDosaHubService.saveAll(rawItems);
         return "rawItems";
 
     }

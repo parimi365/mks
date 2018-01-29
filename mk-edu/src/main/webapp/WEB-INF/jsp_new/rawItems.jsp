@@ -68,12 +68,21 @@
 							<form:form action="/rawItemSave" modelAttribute="rawItems">
 
 								<div class="input-group control-group  after-add-more">
-									<!-- 	  <input type="text" name="addmore[]" class="form-control" placeholder="Enter Name Here">
-				  <input type="text" name="addmore[]" class="form-control" placeholder="Enter Name Here">
-				  <input type="text" name="addmore[]" class="form-control" placeholder="Enter Name Here"> -->
+
+
+
 									<div class="col-md-3">
-										RAW ITEMS <input type="text" name="rawItemsName"
-											class="form-control" placeholder=".col-md-3">
+										RAW ITEMS <!-- <input type="text" name="rawItemsName"
+											class="form-control" placeholder=".col-md-3"> --> <select
+											 class="selecter_3"
+											data-selecter-options='{"cover":"true"}' name = "rawItemsName">
+											<option value="Rice">Rice</option>
+											<option value="Mennapappu">Mennapappu</option>
+											<option value="ravva">ravva</option>
+											<option value="4">palli</option>
+											<option value="5">ground nuts</option>
+										</select>
+
 									</div>
 
 									<div class="col-md-3">
@@ -103,8 +112,15 @@
 
 									<!-- <input type="text" name="addmore[]" class="form-control" placeholder="Enter Name Here"> -->
 									<div class="col-md-3">
-										RAW ITEMS <input type="text" name="rawItemsName"
-											class="form-control" placeholder=".col-md-3">
+										RAW ITEMS <select
+										 class="selecter_3"
+											data-selecter-options='{"cover":"true"}' name = "rawItemsName">
+											<option value="Rice">Rice</option>
+											<option value="Mennapappu">Mennapappu</option>
+											<option value="ravva">ravva</option>
+											<option value="4">Four</option>
+											<option value="5">Five</option>
+										</select>
 									</div>
 
 									<div class="col-md-3">

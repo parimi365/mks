@@ -14,5 +14,10 @@ public interface OrgnaicDosaHubRepository extends CrudRepository<RawItems, Long>
     @Override
     public RawItems save(RawItems student);
     
+    default <S extends RawItems> Iterable<S> saveAll(Iterable<S> entities)
+    {
+        // TODO Auto-generated method stub
+        return this.save(entities);
+    }
  
 }
