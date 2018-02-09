@@ -111,7 +111,7 @@
 								<div class="control-group  input-group" style="margin-top: 10px">
 <div class="col-md-3">
 										RAW ITEMS
-									<input type="text" name="addmore[]" class="form-control" placeholder="Enter Name Here">
+									<input type="text" name="rawItemsName" class="form-control" placeholder="Enter Name Here">
 									</div>
 									<!-- <div class="col-md-3">
 										RAW ITEMS <select
