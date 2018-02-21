@@ -75,13 +75,49 @@ raw_items_id int(11) NOT NULL AUTO_iNCREMENT,
 raw_item_name varchar(60) NOT NULL,
  raw_item_unit varchar(20) NOT NULL,
  raw_item_price int(11),
-
- <-----===============worksers table====---->
+  PRIMARY KEY (`raw_items_id`));
  
- CREATE TABLE `mks_edu`.`mks_workers` (
-  `workers_id` INT NOT NULL AUTO_INCREMENT,
-  `workers_name` VARCHAR(45) NULL,
-  `workers_salary` VARCHAR(45) NULL,
-  `workers_attendance` VARCHAR(45) NULL,
-  `daily date` VARCHAR(45) NULL,
-  PRIMARY KEY (`workers_id`));
+
+ <-----===============Employee table====---->
+ CREATE TABLE `mks_edu`.`mks_employee` (
+  `mks_employee_id` INT NOT NULL AUTO_INCREMENT,
+  `mks_employee_name` VARCHAR(45) NOT NULL,
+  `mks_employee_phone_number` VARCHAR(45) NULL,
+  `mks_employee_salary` VARCHAR(45) NULL,
+  `mks_employee_aadhar` VARCHAR(45) NULL,
+  `mks_employee_joining_date` VARCHAR(45) NULL,
+  PRIMARY KEY (`mks_employee_id`));
+
+  
+  ALTER TABLE `mks_edu`.`mks_employee` 
+ADD COLUMN `mks_employee_position` VARCHAR(45) NULL AFTER `mks_employee_joining_date`;
+  
+  ALTER TABLE `mks_edu`.`mks_employee` 
+ADD COLUMN `mks_employee_discrption` VARCHAR(45) NULL AFTER `mks_employee_position`;
+  
+  
+  
+  <----====users====================--->
+  INSERT INTO `mks_edu`.`users` (`userid`, `email`, `enabled`, `password`, `username`) VALUES ('1', 'karthik.muthyam@gmail.com', '1', 'karthik', 'karthik');
+  
+  
+  
+  
+  
+   <-------==============create workers_ attendance=======---->
+  CREATE TABLE `mks_edu`.`mks_employee_attendance` (
+  `employee_attendance_id` INT NOT NULL AUTO_INCREMENT,
+  `employee_attendance` VARCHAR(45) NULL,
+  `mks_employee_attendance_fk` INT NULL,
+  PRIMARY KEY (`employee_attendance_id`),
+  INDEX `employee_fk_idx` (`mks_employee_attendance_fk` ASC),
+  CONSTRAINT `employee_fk`
+    FOREIGN KEY (`mks_employee_attendance_fk`)
+    REFERENCES `mks_edu`.`mks_employee` (`mks_employee_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+    
+    
+    ALTER TABLE `mks_edu`.`mks_employee_attendance` 
+ADD COLUMN `mks_employee_attendance_date` VARCHAR(45) NULL AFTER `mks_employee_attendance_fk`;
+    

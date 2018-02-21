@@ -72,8 +72,8 @@
 
 
 									<div class="col-md-3">
-										RAW ITEMS <!-- <input type="text" name="rawItemsName"
-											class="form-control" placeholder=".col-md-3"> --> <select
+										RAW ITEMS <input type="text" name="rawItemsName"
+											class="form-control" placeholder=".col-md-3"><!--  <select
 											 class="selecter_3"
 											data-selecter-options='{"cover":"true"}' name = "rawItemsName">
 											<option value="Rice">Rice</option>
@@ -82,7 +82,7 @@
 											<option value="4">palli</option>
 											<option value="5">ground nuts</option>
 										</select>
-
+ -->
 									</div>
 
 									<div class="col-md-3">
@@ -109,9 +109,11 @@
 							<!-- Copy Fields-These are the fields which we get through jquery and then add after the above input,-->
 							<div class="copy-fields hide">
 								<div class="control-group  input-group" style="margin-top: 10px">
-
-									<!-- <input type="text" name="addmore[]" class="form-control" placeholder="Enter Name Here"> -->
-									<div class="col-md-3">
+<div class="col-md-3">
+										RAW ITEMS
+									<input type="text" name="rawItemsName" class="form-control" placeholder="Enter Name Here">
+									</div>
+									<!-- <div class="col-md-3">
 										RAW ITEMS <select
 										 class="selecter_3"
 											data-selecter-options='{"cover":"true"}' name = "rawItemsName">
@@ -122,7 +124,7 @@
 											<option value="5">Five</option>
 										</select>
 									</div>
-
+ -->
 									<div class="col-md-3">
 										UNTIS(KGS) <input type="text" name="rawItemUnit"
 											class="form-control" placeholder=".col-md-3">
