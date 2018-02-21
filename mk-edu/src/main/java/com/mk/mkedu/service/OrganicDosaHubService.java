@@ -57,8 +57,6 @@ public class OrganicDosaHubService
             items.add(items2);
             
         }
-        System.out.println(items.get(0).getRawItemsName());
-        System.out.println(items.get(1).getRawItemsName());
         
       orgnaicDosaHubRepository.saveAll(items);
         if (items == null)

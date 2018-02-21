@@ -27,9 +27,14 @@
 			<li class="collapse" id="demo4"><a href="/rawItems"
 				class="list-group-item"><i
 					class="glyphicon glyphicon-hand-right"></i>raw items</a> <a
-				href="/workers" class="list-group-item"><i
-					class="glyphicon glyphicon-hand-right"></i>workers</a> <a
-				href="/plates" class="list-group-item"><i
+				href="/dosaemployee" class="list-group-item"><i
+					class="glyphicon glyphicon-hand-right"></i>workers</a>
+					<a href="/dosaemployeeAttendance"
+				class="list-group-item"><i
+					class="glyphicon glyphicon-hand-right"></i>worker Attendace</a>
+					 <a
+				href="/plates" class="list-group-item">
+				<i
 					class="glyphicon glyphicon-hand-right"></i>dosa&idly</a></li>
 			</li>
 			<li class="list-group-item"><a href="list.html"><i
