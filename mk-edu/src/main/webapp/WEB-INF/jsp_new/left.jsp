@@ -28,14 +28,12 @@
 				class="list-group-item"><i
 					class="glyphicon glyphicon-hand-right"></i>raw items</a> <a
 				href="/dosaemployee" class="list-group-item"><i
-					class="glyphicon glyphicon-hand-right"></i>workers</a>
-					<a href="/dosaemployeeAttendance"
-				class="list-group-item"><i
-					class="glyphicon glyphicon-hand-right"></i>worker Attendace</a>
-					 <a
-				href="/plates" class="list-group-item">
-				<i
-					class="glyphicon glyphicon-hand-right"></i>dosa&idly</a></li>
+					class="glyphicon glyphicon-hand-right"></i>workers</a> <a
+				href="/dosaemployeeAttendance" class="list-group-item"><i
+					class="glyphicon glyphicon-hand-right"></i>worker Attendace</a> <a
+				href="/plates" class="list-group-item"> <i
+					class="glyphicon glyphicon-hand-right"></i>dosa&idly
+			</a></li>
 			</li>
 			<li class="list-group-item"><a href="list.html"><i
 					class="glyphicon glyphicon-th-list"></i>Tables and List </a></li>
@@ -116,7 +114,52 @@
 
 <script type="text/javascript">
 
-	function SetDate1() {
+	function SetDate11() {
 		var datee = $(myDate);
+		/* request.setAttribute("date",datee);
+		alert('dkdkd'); */
+		
 	}
+	
+	
+	
+	        function SetDate1() {
+	
+	        // get the form values
+		        var name = $(myDate).val();
+	        
+		        //var education = $('#education').val();
+		        alert("fjfjfj");
+	  alert('date' +name);
+	 
+	
+	        $.ajax({
+	
+	        type: "POST",
+	
+	        url: "/mkbu/"+name,
+	
+	        data: "name=" + name,
+	
+	        success: function(response){
+	
+	        // we have the response
+	        $('#name').val('');
+	
+	        },
+	
+	        error: function(e){
+	
+	      //  alert('Error: ' + e);
+	
+	        }
+	
+	        });
+	
+	        }
+	
+	        </script>
+
+
+
 </script>

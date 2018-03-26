@@ -31,6 +31,7 @@
 												name="employeeAttName" placeholder=".col-md-3">
 
 										</div>
+										
 										<div class="col-md-3">
 											<div class="form-check form-check-inline">
 												<input class="form-check-input" type="checkbox"
@@ -46,8 +47,10 @@
 										</div>
 									</div>
 								</c:forEach>
+								
 								<input type="submit" value="save" class="btn btn-info">
 							</c:if>
+							
 						</form:form>
 					</div>
 

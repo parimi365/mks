@@ -10,6 +10,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
@@ -45,25 +47,25 @@ public class EmployeeAttendance implements Serializable
     @Column(name = "mks_employee_id_fk")
    private int employee_id_fk;
    
-    /*@OneToOne
+    @OneToOne
     @JoinColumn(name = "mks_employee_id")
     private Employee employee;
-    *//**
+    /**
      * @return the employee
-     *//*
+     */
     public Employee getEmployee()
     {
         return employee;
     }
 
-    *//**
+    /**
      * @param employee the employee to set
-     *//*
+     */
     public void setEmployee(Employee employee)
     {
         this.employee = employee;
     }
-*/
+
     /**
      * @return the employee_id_fk
      */
